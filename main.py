@@ -60,12 +60,13 @@ app.add_middleware(DBSessionMiddleware, db_url=db_url)
 origins = [
     "http://localhost:3001",
     "http://localhost:3000",
+    "https://talelo-humble-succotash-v5jwj6pjjj7hxvwq-3000.preview.app.github.dev",
     # Add more origins if needed
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
